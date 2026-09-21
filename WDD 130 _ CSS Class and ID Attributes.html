@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)https://byui-cse.github.io/wdd130-ww-course/week03/prepare-css-class-id.html -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 130 | CSS Class and ID Attributes</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./WDD 130 _ CSS Class and ID Attributes_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./WDD 130 _ CSS Class and ID Attributes_files/course.css">
+  <link rel="stylesheet" href="./WDD 130 _ CSS Class and ID Attributes_files/vs2015.min.css">
+  <script src="./WDD 130 _ CSS Class and ID Attributes_files/ruxitagent_D_10343260715123811.js.download" defer="defer" crossorigin="anonymous"></script><script src="./WDD 130 _ CSS Class and ID Attributes_files/692a19d31f48cd0e_complete.js.download" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 130<span id="coursetitle">: Web Fundamentals</span></h1>
+      <img src="./WDD 130 _ CSS Class and ID Attributes_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+
+  <main class="page">
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/">Home</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week01/">W1</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week02/">W2</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/wdd130-ww-course/week03/">W3</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week04/">W4</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week05/">W5</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week06/">W6</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week07/">W7</a></span>
+    </nav>
+
+    <h2>W03 Learning Activities: CSS Selectors – Type, Universal, Class, ID</h2>
+    <h3>Overview</h3>
+    <p>CSS selectors are the way you specify which elements you want to style. They form the subject line of a CSS rule.
+    </p>
+
+    <h3>Prepare</h3>
+    <p>A CSS rule's selector is the first part of the rule that tells the browser which HTML elements should have the
+      CSS property values applied. The elements selected by the selector are referred to as the subjects of the
+      selector.</p>
+
+    <h4>CSS Selector Types</h4>
+    <p>CSS selectors can be different types, depending on whether you want to specify the element by its type, id, or
+      class.</p>
+    <table>
+      <tbody><tr>
+        <th>Selector Type</th>
+        <th>Example</th>
+        <th>CSS Rule Application</th>
+      </tr>
+      <tr>
+        <td>Universal</td>
+        <td><code>* { ... }</code></td>
+        <td>Applies to all elements</td>
+      </tr>
+      <tr>
+        <td>Type (Element)</td>
+        <td><code>h1 { ... }</code></td>
+        <td>Applies to all <code>&lt;h1&gt;</code> elements</td>
+      </tr>
+      <tr>
+        <td>Class</td>
+        <td><code>.red { ... }</code></td>
+        <td>Applies to all elements with the "red" class value</td>
+      </tr>
+      <tr>
+        <td>ID</td>
+        <td><code>#red { ... }</code></td>
+        <td>Applies to the one element with the "red" id value</td>
+      </tr>
+    </tbody></table>
+
+
+    <h4>Using the Class Attribute</h4>
+    <p>A <strong>class</strong> attribute can be applied to many elements in a document. More
+      than one class can be applied to a single element. A class can be selected in CSS by using period (.) notation.
+    </p>
+
+    <!-- <h4>HTML class attribute and CSS class selector examples</h4> -->
+
+    <table>
+      <tbody><tr>
+        <th>HTML</th>
+        <th>CSS</th>
+      </tr>
+      <tr>
+        <td>
+          <code>&lt;div class="callout highlight active"&gt;</code><br>
+          <code>&lt;span class="highlight"&gt;</code>
+        </td>
+        <td><code>.highlight {<em>declarations</em>}</code><br>
+          <code>.callout {<em>declarations</em>}</code><br>
+          <code>.active {<em>declarations</em>}</code><br>
+        </td>
+      </tr>
+    </tbody></table>
+
+    <h4>Using the ID Attribute</h4>
+    <p>An <strong>id</strong> attribute can only be applied to one element per document, and each element may only have
+      one id. The id can be selected by a CSS id selector using hash (<code>#</code>) notation.</p>
+
+    <table>
+      <tbody><tr>
+        <th>HTML</th>
+        <th>CSS</th>
+      </tr>
+      <tr>
+        <td>
+          <code>&lt;nav id="sub-menu"&gt;</code>
+        </td>
+        <td><code>#sub-menu {<em>declarations</em>}</code><br></td>
+      </tr>
+    </tbody></table>
+
+    <h3>Activity Instructions</h3>
+    <ol>
+      <li>In VS Code, open the <strong>class-and-id.html</strong> file located in the <strong>week03</strong> folder.
+      </li>
+      <li>Also open the <strong>class-and-id.css</strong> file located in the <strong>week03</strong>
+        <strong>styles</strong> subfolder.
+      </li>
+      <li>Display the page in your browser using Live/Five Server and review the layout and styles applied to the
+        <code>div</code> elements.
+      </li>
+      <li>In VS Code, remove the <code>highlight</code> class from the second <code>&lt;div&gt;</code>, leaving
+        only one class for that element named <code>box</code>. What happens? You may need to open the CSS file to see
+        the difference.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box"</span>&gt;</span></code></pre>
+          <p>That second div is no longer styled with the "highlight" class and therefore loses those specific
+            declarations.</p>
+        </details>
+      </li>
+      <li>In the HTML, attempt to add another <code>div</code> element with the <code>id</code> attribute of
+        "<code>note</code>" like this:
+        <pre><code class="html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"note"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Testing the note ID.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+        What happens in VS Code?
+        <details>
+          <summary>Check Your Understanding</summary>
+          <p>In VS Code, the editor warns you of a problem by highlighting the duplicate <code>id</code> attribute with
+            a squiggly line.</p>
+          <figure>
+            <img src="./WDD 130 _ CSS Class and ID Attributes_files/duplicate-id.jpg" alt="Duplicate ID Warning">
+          </figure>
+          <p>Note that the browser will actually apply the CSS style, but this application is an HTML validation error
+            that the browser tries to ignore for you.</p>
+        </details>
+      </li>
+    </ol>
+
+
+    <div class="callout reference">
+      <h4>Optional Resources</h4>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors" target="_blank">CSS
+            Selectors</a> – MDN</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors" target="_blank">Type, Class, and ID Selectors</a> – MDN</li>
+
+      </ul>
+    </div>
+
+
+
+  </main>
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="./WDD 130 _ CSS Class and ID Attributes_files/highlight.min.js.download"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="./WDD 130 _ CSS Class and ID Attributes_files/prevent-code-select.js.download"></script>
+
+
+</body></html>
