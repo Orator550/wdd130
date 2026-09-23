@@ -26,10 +26,10 @@ footer {
     margin: 0 auto;
 }
 
-header {
-    display: flex;
+```css header {
+    display: grid;
+    grid-template-columns: 150px 1fr;
     align-items: center;
-    justify-content: space-between;
     background-color: var(--primary-color);
     padding: 15px;
 }
@@ -37,6 +37,28 @@ header {
 header img {
     width: 100px;
     height: auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+header nav a:hover {
+    color: var(--accent2-color);
+    background-color: var(--accent1-color);
+    border-radius: 5px;
 }
 
 nav {
