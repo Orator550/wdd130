@@ -39,7 +39,7 @@ header img {
     height: auto;
 }
 
-```css header nav {
+header nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
