@@ -39,26 +39,29 @@ header img {
     height: auto;
 }
 
-header nav {
+```css header nav {
     display: flex;
     justify-content: flex-end;
-    gap: 25px;
+    align-items: center;
+    gap: 10px;
     margin: 0;
-    padding: 0;
+    padding: 10px;
+    background-color: #e9c46a;
 }
 
 header nav a {
-    color: #ffffff;
+    color: #0b3d4a !important;
+    background-color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
     padding: 10px 15px;
+    display: inline-block;
 }
 
 header nav a:hover {
-    color: var(--accent2-color);
-    background-color: var(--accent1-color);
-    border-radius: 5px;
+    color: #ffffff !important;
+    background-color: #0b3d4a;
 }
 
 nav {
