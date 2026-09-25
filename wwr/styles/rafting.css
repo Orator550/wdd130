@@ -115,10 +115,6 @@ section {
     padding: 20px;
 }
 
-section {
-    padding: 20px;
-}
-
 .history {
     display: grid;
     grid-template-columns: 1fr 250px 1fr;
