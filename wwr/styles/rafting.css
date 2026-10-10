@@ -15,15 +15,19 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    line-height: 1.5;
 }
+
+/* PAGE WIDTH */
 
 header,
 main,
-
 footer {
     width: 840px;
     margin: 0 auto;
 }
+
+/* HEADER */
 
 header {
     display: grid;
@@ -37,6 +41,8 @@ header img {
     width: 100px;
     height: auto;
 }
+
+/* NAVIGATION */
 
 nav {
     display: flex;
@@ -55,24 +61,31 @@ nav a:hover {
     color: var(--accent2-color);
 }
 
+/* HEADINGS */
+
 h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
-h2 {
+h1 {
+    margin: 20px 0;
     text-align: center;
-    margin-bottom: 10px;
 }
 
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
 }
+
+/* GENERAL TEXT */
+
+p {
+    margin: 8px 0;
+}
+
+/* HERO */
 
 .hero {
     position: relative;
@@ -111,15 +124,14 @@ article {
     border: 3px solid var(--primary-color);
 }
 
-section {
-    padding: 20px;
-}
+/* HISTORY */
 
 .history {
     display: grid;
     grid-template-columns: 1fr 250px 1fr;
     gap: 20px;
     align-items: center;
+    padding: 20px;
 }
 
 .history h2 {
@@ -132,6 +144,8 @@ section {
     height: 200px;
     object-fit: cover;
 }
+
+/* ADVENTURES */
 
 .adventures {
     padding: 20px;
@@ -166,13 +180,162 @@ section {
     font-weight: bold;
 }
 
+/* =========================
+   CONTACT PAGE
+   ========================= */
+
+/* Contact page heading */
+
+main > h1 {
+    margin: 20px 0 10px;
+}
+
+/* COMPANY INFORMATION */
+
+.contact-details {
+    text-align: center;
+    margin: 10px 0 25px;
+}
+
+.company-info h2 {
+    margin-bottom: 8px;
+}
+
+.company-info p {
+    margin: 4px 0;
+}
+
+/* MAP + CONTACT FORM */
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+    margin: 20px 0 40px;
+}
+
+/* MAP */
+
+.map {
+    width: 100%;
+}
+
+.map iframe {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+/* CONTACT FORM */
+
+.contact-form {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 8px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: var(--body-font);
+    border: 1px solid #888;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form fieldset {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.contact-form fieldset label {
+    display: block;
+    margin: 6px 0;
+}
+
+.checkbox {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: var(--accent1-color);
+}
+
+/* =========================
+   EMPLOYEES / TEAM
+   ========================= */
+
+.employees {
+    padding: 20px;
+    margin: 20px 0 40px;
+    border: 1px solid #aaa;
+}
+
+.employees h2 {
+    margin-bottom: 25px;
+}
+
+.employee-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: start;
+}
+
+.employee-list figure {
+    margin: 0;
+    text-align: center;
+}
+
+.employee-list img {
+    width: 180px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.employee-list figcaption {
+    padding: 8px 4px;
+    font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-color);
     color: white;
-    padding: 15px
+    padding: 15px;
 }
 
 footer p {
@@ -192,5 +355,5 @@ footer .socialmedia {
 
 .socialmedia img {
     width: 30px;
-    height: 30px
+    height: 30px;
 }
