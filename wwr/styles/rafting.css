@@ -18,12 +18,11 @@ body {
     line-height: 1.5;
 }
 
-/* PAGE WIDTH */
-
 header,
 main,
 footer {
     width: 840px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -34,15 +33,13 @@ header {
     grid-template-columns: 150px 1fr;
     align-items: center;
     background-color: var(--primary-color);
-    padding: 15px;
+    padding: 10px 15px;
 }
 
 header img {
     width: 100px;
     height: auto;
 }
-
-/* NAVIGATION */
 
 nav {
     display: flex;
@@ -54,14 +51,14 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 10px;
 }
 
 nav a:hover {
     color: var(--accent2-color);
 }
 
-/* HEADINGS */
+/* HEADINGS AND TEXT */
 
 h1,
 h2 {
@@ -78,8 +75,6 @@ h2 {
     text-align: center;
     margin-bottom: 15px;
 }
-
-/* GENERAL TEXT */
 
 p {
     margin: 8px 0;
@@ -102,10 +97,9 @@ p {
     top: 20px;
     width: 100%;
     padding: 16px;
-    text-align: center;
-    opacity: 0.85;
     background-color: var(--accent1-color);
     color: white;
+    opacity: 0.85;
 }
 
 .hero article {
@@ -113,8 +107,8 @@ p {
     bottom: 20px;
     left: 20px;
     right: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
     padding: 15px;
+    background-color: rgba(255, 255, 255, 0.85);
 }
 
 .hero article img {
@@ -136,7 +130,6 @@ p {
 
 .history h2 {
     grid-column: 1 / 4;
-    text-align: center;
 }
 
 .history img {
@@ -149,11 +142,6 @@ p {
 
 .adventures {
     padding: 20px;
-}
-
-.adventures h2 {
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 .adventure-gallery {
@@ -180,45 +168,41 @@ p {
     font-weight: bold;
 }
 
-/* =========================
-   CONTACT PAGE
-   ========================= */
-
-/* Contact page heading */
+/* CONTACT PAGE */
 
 main > h1 {
-    margin: 20px 0 10px;
+    margin: 12px 0 10px;
 }
 
-/* COMPANY INFORMATION */
+/* COMPANY CONTACT DETAILS */
 
-.contact-details {
+.contact-info {
+    display: block;
     text-align: center;
-    margin: 10px 0 25px;
+    margin: 0 15px 20px;
 }
 
-.company-info h2 {
+.contact-info h2 {
     margin-bottom: 8px;
 }
 
-.company-info p {
+.contact-info p {
     margin: 4px 0;
 }
 
-/* MAP + CONTACT FORM */
+/* MAP AND FORM SIDE BY SIDE */
 
-.contact-info {
+.contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     align-items: start;
-    margin: 20px 0 40px;
+    margin: 20px 15px 30px;
 }
-
-/* MAP */
 
 .map {
     width: 100%;
+    min-width: 0;
 }
 
 .map iframe {
@@ -228,17 +212,14 @@ main > h1 {
     border: 0;
 }
 
-/* CONTACT FORM */
-
 .contact-form {
     width: 100%;
-    max-width: none;
+    min-width: 0;
     margin: 0;
-    padding: 0;
 }
 
 .contact-form h2 {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .contact-form form {
@@ -250,8 +231,9 @@ main > h1 {
 .contact-form input[type="email"],
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 9px;
     font-family: var(--body-font);
+    color: var(--accent1-color);
     border: 1px solid #888;
 }
 
@@ -260,23 +242,38 @@ main > h1 {
 }
 
 .contact-form fieldset {
-    padding: 10px;
-    margin: 5px 0;
+    padding: 8px;
+    margin: 4px 0;
+    border: 1px solid #ddd;
+}
+
+.contact-form legend {
+    padding: 0 4px;
 }
 
 .contact-form fieldset label {
     display: block;
-    margin: 6px 0;
+    margin: 5px 0;
 }
 
-.checkbox {
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.contact-form .checkbox {
     display: flex;
-    gap: 8px;
-    align-items: center;
+    gap: 4px;
+    align-items: flex-start;
+}
+
+.contact-form .checkbox input {
+    margin-top: 5px;
 }
 
 .contact-form button {
-    padding: 12px;
+    width: 100%;
+    padding: 10px;
     background-color: var(--primary-color);
     color: white;
     border: none;
@@ -288,51 +285,52 @@ main > h1 {
     background-color: var(--accent1-color);
 }
 
-/* =========================
-   EMPLOYEES / TEAM
-   ========================= */
+/* EMPLOYEE SECTION */
 
-.employees {
-    padding: 20px;
-    margin: 20px 0 40px;
+.employee-section {
+    margin: 25px 15px 30px;
+    padding: 15px;
     border: 1px solid #aaa;
+    background-color: #f7f7f7;
 }
 
-.employees h2 {
-    margin-bottom: 25px;
+.employee-section h2 {
+    margin-bottom: 15px;
 }
 
-.employee-list {
+.employee-profiles {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 20px;
+    justify-items: center;
     align-items: start;
 }
 
-.employee-list figure {
+.employee-profiles figure {
     margin: 0;
     text-align: center;
 }
 
-.employee-list img {
-    width: 180px;
-    height: 150px;
+.employee-profiles img {
+    display: block;
+    width: 100px;
+    height: 80px;
+    margin: 0 auto;
     object-fit: cover;
 }
 
-.employee-list figcaption {
-    padding: 8px 4px;
-    font-weight: bold;
+.employee-profiles figcaption {
+    padding: 5px 0;
+    font-size: 14px;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+/* FOOTER */
 
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
     background-color: var(--primary-color);
     color: white;
     padding: 15px;
@@ -344,9 +342,8 @@ footer p {
 
 footer .socialmedia {
     display: flex;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
+    align-items: center;
+    gap: 15px;
 }
 
 .socialmedia a {
@@ -354,6 +351,33 @@ footer .socialmedia {
 }
 
 .socialmedia img {
+    display: block;
     width: 30px;
     height: 30px;
+}
+
+/* SMALL SCREENS */
+
+@media (max-width: 600px) {
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .employee-profiles {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
 }
